@@ -1,8 +1,8 @@
-# ♻️ WasteWise-AI: Zero-to-Hero Waste Management Platform
+# ♻️ EchoWise-AI: Zero-to-Hero Waste Management Platform
 
 <div align="center">
 
-![WasteWise-AI](https://img.shields.io/badge/WASTEWISE--AI-DECENTRALIZED%20WASTE%20MANAGEMENT-28A745?style=for-the-badge)
+![EchoWise-AI](https://img.shields.io/badge/EchoWise--AI-DECENTRALIZED%20WASTE%20MANAGEMENT-28A745?style=for-the-badge)
 ![AI-Powered](https://img.shields.io/badge/AI--POWERED-GEMINI%20AI-FFC107?style=for-the-badge)
 ![Blockchain](https://img.shields.io/badge/BLOCKCHAIN-WEB3AUTH-6C5CE7?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/NEXT.JS-FULLSTACK-000000?style=for-the-badge)
@@ -73,7 +73,7 @@ This delay leads to environmental pollution, attracts pests, and creates public 
 
 ## 💡 Our Solution
 
-### WasteWise-AI: An Incentivized Ecosystem
+### EchoWise-AI: An Incentivized Ecosystem
 
 A full-stack, community-driven platform that leverages AI for verification and Web3 for gamified rewards, solving the engagement and transparency problems of waste management.
 
@@ -86,7 +86,7 @@ A full-stack, community-driven platform that leverages AI for verification and W
 
 #### 🎯 Key Innovation
 
-WasteWise-AI is unique because it combines **Gemini AI's computer vision** for real-world environmental data capture with a **Web3 token economy** to directly incentivize positive community action, turning a civic duty into a rewarding activity.
+EchoWise-AI is unique because it combines **Gemini AI's computer vision** for real-world environmental data capture with a **Web3 token economy** to directly incentivize positive community action, turning a civic duty into a rewarding activity.
 
 ---
 
@@ -191,8 +191,8 @@ Git for version control
 
 ```bash
 # Clone repository
-git clone [https://github.com/ayushkumar1991/WasteWise-AI.git](https://github.com/ayushkumar1991/WasteWise-AI.git)
-cd WasteWise-AI
+git clone [https://github.com/ayushkumar1991/EchoWise-AI.git](https://github.com/ayushkumar1991/EchoWise-AI.git)
+cd EchoWise-AI
 
 # Install dependencies
 yarn install
