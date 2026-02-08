@@ -12,7 +12,6 @@
 
 </div>
 <div align="center">
-  Revolutionizing Waste Management with AI & Web3
 
 _An AI-powered(Gemini 3) decentralized waste management system that rewards users for reporting and collecting waste, creating a sustainable community-driven approach to environmental protection._
 
@@ -80,7 +79,7 @@ A full-stack, community-driven platform that leverages AI for verification and W
 
 #### 🔬 How It Works
 
-1.  **AI Verification:** Users report waste via an image; Google Gemini AI instantly verifies the type and quantity.
+1.  **AI Verification:** Users report waste via an image; Google Gemini 3 AI instantly verifies the type and quantity.
 2.  **Gamified Rewards:** Verified reports earn users ERC-20 compliant tokens, tracked on a transparent leaderboard.
 3.  **Real-Time Tasks:** Reported waste immediately becomes a collection task on an interactive map.
 4.  **Decentralized Access:** Web3Auth provides secure, multi-wallet authentication for all users.
@@ -97,7 +96,7 @@ EchoWise-AI is unique because it combines **Gemini AI's computer vision** for re
 
 | Feature | Description | Impact |
 | --- | --- | --- |
-| **AI-Powered Waste Detection** | Uses Google Gemini AI for image recognition, classification, and quantity estimation. | Ensures report accuracy and enables data-driven collection. |
+| **AI-Powered Waste Detection** | Uses Google Gemini 3 AI for image recognition, classification, and quantity estimation. | Ensures report accuracy and enables data-driven collection. |
 | **Gamified Reward System** | Earn points/tokens for reporting and collecting, tracked on a leaderboard. | Boosts user engagement and participation through competition. |
 | **Interactive Mapping** | Google Maps Integration for visual waste location and Route Optimization for collectors. | Increases collection efficiency and reduces fuel costs. |
 | **Web3Auth Authentication** | Secure, decentralized login with multi-wallet and social provider support. | Provides self-sovereign identity and seamless cross-platform access. |
@@ -119,7 +118,7 @@ graph TB
     end
 
     subgraph "External AI/Services"
-        E[🧠 AI &#124; Google Gemini AI]
+        E[🧠 AI &#124; Google Gemini 3 AI]
         F[🗺️ Mapping &#124; Google Maps API]
         G[🔗 Blockchain &#124; Ethereum/Ethers.js]
     end
@@ -165,7 +164,7 @@ graph TB
 ### AI & Web3
 
 ```
-🧠 Google Gemini 2.5 Flash (Multimodal Vision)
+🧠 Google Gemini 3 Flash (Multimodal Vision)
 🔗 Web3Auth - Decentralized authentication
 ⛓️ Ethereum (Sepolia Testnet) - Smart contract integration
 ```
@@ -192,7 +191,7 @@ Git for version control
 
 ```bash
 # Clone repository
-git clone [https://github.com/ayushkumar1991/EchoWise-AI.git](https://github.com/ayushkumar1991/EchoWise-AI.git)
+git clone (https://github.com/ayushkumar1991/EchoWise-AI.git)
 cd EchoWise-AI
 
 # Install dependencies
@@ -223,14 +222,14 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
 ---
 
-## 🔬Why Gemini?
+## 🔬Why Gemini 3?
 
-### We chose Gemini 2.5 Flash because:
+### We chose Gemini 3 Flash because:
 
 -**⚡ Ultra-fast inference for real-time UX**
 -**🖼️ Strong multimodal vision understanding**
-8**📊 Structured JSON output capability**
-8**🧠 Context-aware environmental reasoning**
+-**📊 Structured JSON output capability**
+-**🧠 Context-aware environmental reasoning**
 
 **Gemini acts as our Environmental Intelligence Engine.**
 
@@ -251,7 +250,7 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
 ## 🔐Web3 + AI = Trust + Intelligence
 
--**Gemini provides:->Intelligent classification**
+-**Gemini 3 provides:->Intelligent classification**
 
 -**Web3Auth provides:->Decentralized identity**
 
@@ -260,7 +259,7 @@ Together:-> Transparent, trust-driven environmental data system
 
 <div align="center">
 
-🌱 Built with Gemini for a Cleaner Future
+🌱 Built with Gemini 3 for a Cleaner Future
 
 </div>
 
