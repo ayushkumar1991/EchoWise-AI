@@ -110,7 +110,7 @@ export default function ReportPage() {
   try {
     const genAI = new GoogleGenerativeAI(geminiApiKey);
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-3-flash-preview",
     });
 
     const base64Data = await readFileAsBase64(file);
