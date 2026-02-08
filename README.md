@@ -14,12 +14,12 @@
 <div align="center">
   Revolutionizing Waste Management with AI & Web3
 
-_An AI-powered decentralized waste management system that rewards users for reporting and collecting waste, creating a sustainable community-driven approach to environmental protection._
+_An AI-powered(Gemini 3) decentralized waste management system that rewards users for reporting and collecting waste, creating a sustainable community-driven approach to environmental protection._
 
 
 ## 🌍 "Built for Community - Pioneering Environmental Innovation"
 
-[🚀 Live Demo](https://waste-wise-ai-pgqc.vercel.app/)
+[🚀 Live Demo](https://echo-wise-ai.vercel.app/)
 
 </div>
 
@@ -165,7 +165,7 @@ graph TB
 ### AI & Web3
 
 ```
-🧠 Google Gemini AI - Advanced image recognition/analysis
+🧠 Google Gemini 2.5 Flash (Multimodal Vision)
 🔗 Web3Auth - Decentralized authentication
 ⛓️ Ethereum (Sepolia Testnet) - Smart contract integration
 ```
@@ -212,21 +212,27 @@ yarn dev
 ### Environment Variables
 
 ```bash
-# Database Configuration
-DATABASE_URL="postgresql://username:password@host:port/database?sslmode=require"
 
 # Google Services
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="your_google_maps_api_key"
 NEXT_PUBLIC_GEMINI_API_KEY="your_gemini_api_key"
-
-# Web3Auth Configuration
-NEXT_PUBLIC_WEB3AUTH_CLIENT_ID="your_web3auth_client_id"
 
 # Application
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
 ---
+
+## 🔬Why Gemini?
+
+### We chose Gemini 2.5 Flash because:
+
+-**⚡ Ultra-fast inference for real-time UX**
+-**🖼️ Strong multimodal vision understanding**
+8**📊 Structured JSON output capability**
+8**🧠 Context-aware environmental reasoning**
+
+**Gemini acts as our Environmental Intelligence Engine.**
 
 ## 🧠AI Integration
 
@@ -242,9 +248,19 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 - **Seamless UX: Offers multi-provider support (social logins + crypto wallets).**
 - **Security: Provides decentralized identity and non-custodial key management.**
 ---
+
+## 🔐Web3 + AI = Trust + Intelligence
+
+-**Gemini provides:->Intelligent classification**
+
+-**Web3Auth provides:->Decentralized identity**
+
+Together:-> Transparent, trust-driven environmental data system
+---
+
 <div align="center">
 
-Built with ❤️ for a sustainable future.
+🌱 Built with Gemini for a Cleaner Future
 
 </div>
 
