@@ -195,17 +195,14 @@ git clone (https://github.com/ayushkumar1991/EchoWise-AI.git)
 cd EchoWise-AI
 
 # Install dependencies
-yarn install
+npm install
 
 # Setup environment variables
 cp .env.example .env.local 
 # (Configure variables as per Environment Setup)
 
-# Setup database (Pushes Drizzle schema to Neon DB)
-yarn db:push
-
 # Start development server
-yarn dev
+npm dev
 ```
 
 ### Environment Variables
@@ -226,10 +223,10 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
 ### We chose Gemini 3 Flash because:
 
--**⚡ Ultra-fast inference for real-time UX**
--**🖼️ Strong multimodal vision understanding**
--**📊 Structured JSON output capability**
--**🧠 Context-aware environmental reasoning**
+- **⚡ Ultra-fast inference for real-time UX.**
+- **🖼️ Strong multimodal vision understanding.**
+- **📊 Structured JSON output capability.**
+- **🧠 Context-aware environmental reasoning.**
 
 **Gemini acts as our Environmental Intelligence Engine.**
 
