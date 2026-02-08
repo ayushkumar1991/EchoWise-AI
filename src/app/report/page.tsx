@@ -102,61 +102,89 @@ export default function ReportPage() {
     });
   };
 
-  const handleVerify = async () => {
-    if (!file || !geminiApiKey) return;
+ const handleVerify = async () => {
+  if (!file || !geminiApiKey) return;
 
-    setVerificationStatus('verifying');
-    
-    try {
-      const genAI = new GoogleGenerativeAI(geminiApiKey);
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  setVerificationStatus("verifying");
 
-      const base64Data = await readFileAsBase64(file);
+  try {
+    const genAI = new GoogleGenerativeAI(geminiApiKey);
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+    });
 
-      const imageParts = [{
+    const base64Data = await readFileAsBase64(file);
+
+    const imageParts = [
+      {
         inlineData: {
-          data: base64Data.split(',')[1],
+          data: base64Data.split(",")[1],
           mimeType: file.type,
         },
-      }];
+      },
+    ];
 
-      const prompt = `You are an expert in waste management. Analyze this image and respond ONLY in a valid JSON format like this: {"wasteType": "type of waste", "quantity": "estimated quantity with unit", "confidence": 0.9}. Do not include any other text or markdown formatting.`;
+    const prompt = `
+You are an expert in waste management.
 
-      const result = await model.generateContent([prompt, ...imageParts]);
-      const response = await result.response;
-      const text = response.text();
-      
-      try {
-        const jsonMatch = text.match(/\{[\s\S]*\}/);
-        if (!jsonMatch) {
-          throw new Error("No valid JSON object found in the response.");
-        }
-        const jsonString = jsonMatch[0];
-        const parsedResult = JSON.parse(jsonString);
+Analyze this image and respond ONLY with a valid JSON object.
+Do NOT include markdown.
+Do NOT include backticks.
+Do NOT include explanations.
 
-        if (parsedResult.wasteType && parsedResult.quantity && parsedResult.confidence) {
-          setVerificationResult(parsedResult);
-          setVerificationStatus('success');
-          setNewReport({
-            ...newReport,
-            type: parsedResult.wasteType,
-            amount: parsedResult.quantity
-          });
-          toast.success("Image verified successfully!");
-        } else {
-          throw new Error('Invalid or incomplete JSON structure from AI.');
-        }
-      } catch (error) {
-        console.error('Failed to parse JSON response:', text, error);
-        setVerificationStatus('failure');
-        toast.error("AI verification failed. The response was unclear.");
-      }
-    } catch (error) {
-      console.error('Error verifying waste:', error);
-      setVerificationStatus('failure');
-      toast.error("An error occurred during AI verification.");
+Format strictly like this:
+{
+  "wasteType": "type of waste",
+  "quantity": "estimated quantity with unit",
+  "confidence": 0.9
+}
+`;
+
+    const result = await model.generateContent([prompt, ...imageParts]);
+    const response = await result.response;
+    const text = response.text().trim();
+
+    // Extract JSON safely
+    const jsonMatch = text.match(/\{[\s\S]*?\}/);
+
+    if (!jsonMatch) {
+      throw new Error("No valid JSON object found in AI response.");
     }
-  };
+
+    const parsedResult = JSON.parse(jsonMatch[0]);
+
+    // Strict validation (0.0 is allowed!)
+    if (
+      typeof parsedResult.wasteType !== "string" ||
+      typeof parsedResult.quantity !== "string" ||
+      typeof parsedResult.confidence !== "number"
+    ) {
+      throw new Error("Invalid or incomplete JSON structure from AI.");
+    }
+
+    // Clamp confidence between 0 and 1
+    parsedResult.confidence = Math.min(
+      Math.max(parsedResult.confidence, 0),
+      1
+    );
+
+    setVerificationResult(parsedResult);
+    setVerificationStatus("success");
+
+    setNewReport((prev) => ({
+      ...prev,
+      type: parsedResult.wasteType,
+      amount: parsedResult.quantity,
+    }));
+
+    toast.success("Image verified successfully!");
+  } catch (error) {
+    console.error("Verification error:", error);
+    setVerificationStatus("failure");
+    toast.error("AI verification failed. Please try again.");
+  }
+};
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

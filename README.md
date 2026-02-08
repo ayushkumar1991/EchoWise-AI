@@ -2,6 +2,7 @@
 
 <div align="center">
 
+
 ![EchoWise-AI](https://img.shields.io/badge/EchoWise--AI-DECENTRALIZED%20WASTE%20MANAGEMENT-28A745?style=for-the-badge)
 ![AI-Powered](https://img.shields.io/badge/AI--POWERED-GEMINI%20AI-FFC107?style=for-the-badge)
 ![Blockchain](https://img.shields.io/badge/BLOCKCHAIN-WEB3AUTH-6C5CE7?style=for-the-badge)
